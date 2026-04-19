@@ -1,209 +1,75 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>ল্যাব সায়েন্স ডায়াগনস্টিক</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ল্যাব সায়েন্স ডায়াগনস্টিক</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet"> 
+    <style> 
+        *{ box-sizing:border-box; margin:0; padding:0; } 
+        body{ font-family:'Noto Sans Bengali', sans-serif; background:#f1f5f9; color:#1e293b; } 
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+        /* Banner */ 
+        .top-banner{ background:linear-gradient(90deg,#0f4c81,#2563eb); color:white; padding:10px; overflow:hidden; white-space:nowrap; font-weight:600; position: sticky; top: 0; z-index: 1000; } 
+        .top-banner div{ display:inline-block; padding-left:100%; animation:scroll 15s linear infinite; } 
+        @keyframes scroll{ 0%{transform:translateX(0)} 100%{transform:translateX(-100%)} } 
 
-<style>
+        /* Header */ 
+        header{ background:white; padding:15px 25px; text-align:center; border-bottom-left-radius:30px; border-bottom-right-radius:30px; box-shadow:0 8px 20px rgba(0,0,0,0.08); } 
+        header img{ height:50px; margin-bottom:5px; } 
+        header h1{ color:#0f4c81; font-size:22px; font-weight:700; } 
 
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
+        /* Container */ 
+        .container{ max-width:450px; margin:auto; padding:15px; } 
 
-html, body {
-height: 100%;
-overflow-x: hidden;
-}
+        /* Card */ 
+        .card{ background:white; border-radius:25px; padding:25px; margin-bottom:15px; text-align:center; box-shadow: 0 10px 25px rgba(0,0,0,0.05); } 
 
-body{
-font-family:'Noto Sans Bengali', sans-serif;
-background:#f1f5f9;
-color:#1e293b;
-display: flex;
-flex-direction: column;
-min-height: 100vh;
-}
+        /* Profile */ 
+        .profile-img-container { position: relative; width: 130px; height: 130px; margin: 0 auto 15px; }
+        .profile-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 2px solid #e0f2fe; padding: 5px; background: linear-gradient(135deg, #e0f2fe, #bae6fd); }
 
-/* Banner */
+        /* Text */ 
+        .card h2{ margin:5px 0; font-size:24px; color: #1e293b; } 
+        .card .designation { color: #475569; font-size: 16px; font-weight: 600; margin-bottom: 2px; }
+        .card .address { color: #94a3b8; font-size: 14px; }
 
-.top-banner{
-background:linear-gradient(90deg,#0f4c81,#2563eb);
-color:white;
-padding:12px;
-overflow:hidden;
-white-space:nowrap;
-font-weight:600;
-flex-shrink: 0;
-}
+        /* Buttons */ 
+        .btn{ display:block; text-decoration:none; padding:14px; border-radius:12px; font-weight:700; margin-top:20px; transition:0.3s; } 
+        .call{ background:#14b8a6; color:white; box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3); } 
+        .complaint-section h2 { font-size: 20px; color: #1e293b; margin-bottom: 5px; }
+        .complaint-section p { font-size: 13px; color: #64748b; }
+        .complaint{ background:#0f4c81; color:white; box-shadow: 0 4px 15px rgba(15, 76, 129, 0.3); } 
+    </style> 
+</head> 
+<body> 
+    <div class="top-banner"> 
+        <div>আপনাদের সেবায় নিয়োজিত — ল্যাব সায়েন্স ডায়াগনস্টিক — আপনাদের সুস্থতাই আমাদের কাম্য</div> 
+    </div> 
 
-.top-banner div{
-display:inline-block;
-padding-left:100%;
-animation:scroll 15s linear infinite;
-}
+    <header> 
+        <img src="logo.png" alt="Logo"> 
+        <h1>ল্যাব সায়েন্স ডায়াগনস্টিক</h1> 
+    </header> 
 
-@keyframes scroll{
-0%{transform:translateX(0)}
-100%{transform:translateX(-100%)}
-}
+    <div class="container"> 
+        <div class="card"> 
+            <div class="profile-img-container">
+                <img src="zia_vai_passport.jpg" class="profile-img" alt="Profile"> 
+            </div>
+            <h2>জিয়া চৌধুরী</h2> 
+            <p class="designation">ম্যানেজার, টেকনিক্যাল</p> 
+            <p class="address">১৫৩/১ গ্রিন রোড, ঢাকা</p> 
+            <a href="tel:+8801972660011" class="btn call"> 📞 কল করুন </a> 
+        </div> 
 
-/* Header */
-
-header{
-background:white;
-padding:20px 15px;
-text-align:center;
-border-bottom-left-radius:30px;
-border-bottom-right-radius:30px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-flex-shrink: 0;
-}
-
-header img{
-height:65px;
-margin-bottom:8px;
-}
-
-header h1{
-color:#0f4c81;
-font-size:22px;
-font-weight:700;
-}
-
-/* Container */
-
-.container{
-width: 100%;
-max-width: 500px;
-margin: 0 auto;
-padding: 15px;
-flex-grow: 1;
-}
-
-/* Card */
-
-.card{
-background:white;
-border-radius:22px;
-padding:25px;
-margin-bottom:15px;
-text-align:center;
-box-shadow:0 6px 20px rgba(0,0,0,0.06);
-transition:0.3s;
-}
-
-@media (hover: hover) {
-    .card:hover{
-    transform:translateY(-4px);
-    }
-}
-
-/* Profile */
-
-.profile-img{
-width:110px;
-height:110px;
-border-radius:50%;
-object-fit:cover;
-margin-bottom:12px;
-border:5px solid #e0f2fe;
-}
-
-/* Text */
-
-.card h2{
-margin:5px 0;
-font-size:20px;
-}
-
-.card p{
-color:#64748b;
-font-size: 15px;
-line-height: 1.5;
-}
-
-/* Buttons */
-
-.btn{
-display:block;
-text-decoration:none;
-padding:16px;
-border-radius:14px;
-font-weight:700;
-margin-top:16px;
-transition:0.3s;
-font-size: 16px;
-}
-
-.call{
-background:#14b8a6;
-color:white;
-box-shadow:0 6px 15px rgba(20,184,166,0.4);
-}
-
-.complaint{
-background:#0f4c81;
-color:white;
-box-shadow:0 6px 15px rgba(15,76,129,0.4);
-}
-
-/* Mobile Specific Adjustments */
-@media (max-width: 480px) {
-    header h1 { font-size: 20px; }
-    .container { padding: 10px; }
-    .card { padding: 20px; }
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="top-banner">
-<div>আপনাদের সেবায় নিয়োজিত — ল্যাব সায়েন্স ডায়াগনস্টিক — আপনাদের সুস্থতাই আমাদের কাম্য</div>
-</div>
-
-<header>
-<img src="logo.png" alt="Logo">
-<h1>ল্যাব সায়েন্স ডায়াগনস্টিক</h1>
-</header>
-
-<div class="container">
-
-<div class="card">
-
-<img src="zia_vai_passport.jpg" class="profile-img" alt="Zia Chowdhury">
-
-<h2>জিয়া চৌধুরী</h2>
-
-<p><b>ম্যানেজার, টেকনিক্যাল</b></p>
-
-<p>১৫৩/১ গ্রিন রোড, ঢাকা</p>
-
-<a href="tel:+8801972660011" class="btn call">
-📞 কল করুন
-</a>
-
-</div>
-
-<div class="card">
-
-<h2>অভিযোগ বা মতামত</h2>
-
-<p>আমাদের সেবার মান উন্নত করতে আপনার মতামত দিন</p>
-
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSekhTk-hSKsf3Q7uZ8S2ofNNMavX3VsM58T8qjcx7UXpxuiBQ/viewform" target="_blank" class="btn complaint">
-অভিযোগ জমা দিন
-</a>
-
-</div>
-
-</div>
-
-</body>
+        <div class="card complaint-section"> 
+            <h2>অভিযোগ বা মতামত</h2> 
+            <p>আমাদের সেবার মান উন্নত করতে আপনার মতামত দিন</p> 
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSekhTk-hSKsf3Q7uZ8S2ofNNMavX3VsM58T8qjcx7UXpxuiBQ/viewform" target="_blank" class="btn complaint"> 
+                অভিযোগ জমা দিন 
+            </a> 
+        </div> 
+    </div> 
+</body> 
 </html>
